@@ -166,7 +166,7 @@ body{
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: brightness(0.5);
+  filter: brightness(0.8);
 }
 
 .navbar {
@@ -592,7 +592,7 @@ z-index: 98;
 
 
 .icon-holder .icon{
-  right: 70%;
+  right: 68%;
   top: -35%;
   color: #2fbced;
   opacity: 0.1;
@@ -888,7 +888,6 @@ z-index: 98;
   color: #000 !important;
 }
 
-
 .blog-title{
   position: absolute;
   top: 40px;
@@ -900,6 +899,8 @@ z-index: 98;
   margin: 10px 0!important;
   opacity: 1 !important;
 }
+
+
 
 /* ----------------------- testimonial */
 
@@ -1085,7 +1086,10 @@ z-index: 98;
   .hero-section h1 {
     font-size: 50px;
   }
+  .icon-holder .icon{
+    right: 62%;
 
+  }
   .hero-section p {
     font-size: 20px;
   }
@@ -1128,6 +1132,13 @@ z-index: 98;
   .box:hover > img {
   width: 100%;
   height: 100%;
+}
+
+#blog .blog-video{
+  width: 50% !important;
+}
+#blog .sec-title{
+  margin-bottom: 5px !important;
 }
 }
 
@@ -1184,6 +1195,10 @@ z-index: 98;
 .service .sec_btn-ser{
   margin-top: 0;
 }
+
+#blog .blog-video{
+  width: 100% !important;
+}
 #f-footer {
   padding-left: 9px !important;
 }
@@ -1209,13 +1224,38 @@ z-index: 98;
 }
 
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1120px) {
 
   .icon-holder .icon {
     display: none !important;
   }
-  #blog {
-    padding: 30px !important;
+  #blog .blog-video{
+    width: 60% !important;
+  }
+  .sec-title{
+    margin-bottom: 0em;
+  }
+  .service .sec_btn-ser{
+    margin-top: -40px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  #blog .blog-video{
+    width: 100% !important;
+  }
+  #blog .sec-title{
+    margin-bottom: 2em !important;
+  }
+  .sec-title{
+    margin-bottom: 3em;
+  }
+  .service .sec_btn-ser{
+    margin-top: 0px;
+  }
+  .accord-item{
+    padding-bottom: 5px !important;
+    margin-top: 12px !important;
   }
 }
 @media screen and (max-width: 600px){
@@ -1223,6 +1263,9 @@ z-index: 98;
     .scroll-container,
     .scroll-area {
     scroll-snap-type: none;
+  }
+  .icon-holder .icon {
+    display: none !important;
   }
 
   .up {
@@ -1313,12 +1356,9 @@ z-index: 98;
   .tech {
     width: 50% !important;
   }
-  #blog {
-    padding: 90px 20px !important;
-  }
 
-  .blog-text{
-    text-align: center !important;
+  #blog .blog-video{
+    width: 100% !important;
   }
 
 
@@ -1400,9 +1440,7 @@ z-index: 98;
   .accord-body p {
     font-size: 12px;
   }
-  #blog {
-    padding: 90px 20px !important;
-  }
+
   .blog-text p{
     font-size: 12px !important;
   }
@@ -1442,4 +1480,15 @@ z-index: 98;
   }
 } 
 
+@media screen and (max-width: 280px) {
+  .sec-title{
+    margin-bottom: -10px;
+  }
+  #about-us {
+    margin-bottom: 40px;
+  }
+  .testimonial .slide p {
+    font-size: 11px;
+  }
+}
 
