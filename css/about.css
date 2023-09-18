@@ -481,13 +481,34 @@ body{
 /* ---------------- about */
 
 .about p {
-    line-height: 2em;
+    line-height: 2em !important;
 }
-
 
 
 .certified h1 span{
     color: #2fbced !important;
+}
+
+.about-text {
+  position: relative;
+  font-size: 60px;
+}
+
+.about-text span{
+  color: #2fbced !important;
+}
+
+
+
+
+.about-text::after {
+  content: '';
+  position: absolute;
+  top: 110%;
+  left: 0;
+  width: 40%;
+  height: 2px;
+  background: linear-gradient(to left, transparent, #4070f4, transparent);
 }
 
 /* --------------- footer */
@@ -580,6 +601,10 @@ body{
     font-size: 10px;
     padding: 8px;
   }
+
+  .footer-box p {
+    margin-bottom: 2.5px !important;
+  }
 }
 
 @media screen and (max-width: 1200px){
@@ -625,6 +650,10 @@ body{
     .navtwo-item-wrapper::after{
       height: 50px;
       top: 70px;
+    }
+
+    .footer-box p {
+      margin-bottom: 12.5px !important;
     }
 
     

@@ -476,7 +476,7 @@ z-index: 98;
 /* ----------------------- hero */
 
   #slider{
-    display: none;
+    /* display: none; */
   }
 .fnc-slider {
   position: absolute;
@@ -783,12 +783,12 @@ z-index: 98;
 }
 .example-slider .fnc-slide-1 .fnc-slide__inner,
 .example-slider .fnc-slide-1 .fnc-slide__mask-inner {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/people/1\ \(1\).jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/people/1\ \(2\).jpg);
   background-size: cover;
 }
 .example-slider .fnc-slide-2 .fnc-slide__inner,
 .example-slider .fnc-slide-2 .fnc-slide__mask-inner {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/people/1\ \(2\).jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/people/test.png);
   background-size: cover;
 }
 .example-slider .fnc-slide-3 .fnc-slide__inner,
@@ -1347,7 +1347,17 @@ z-index: 98;
   width: 100%;
 }
 /* ----------------------- footer */
-
+.clients {
+  margin: 4rem 0;
+}
+.tech {
+  width: 50%;
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+}
+.tech:hover {
+  filter: grayscale(0%);
+}
 .footer{
   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/subtle-prism2.png);
   background-repeat: no-repeat;
@@ -1355,21 +1365,12 @@ z-index: 98;
   background-attachment: fixed;
   background-size: cover;
   color: #f4fffe;
+  padding: 0.5rem;
 }
 #f-footer {
   padding-left: 5rem !important;
 }
 
-.footer-section {
-  position: relative;
-}
-
-.footer-bottom{
-  position: absolute;
-  bottom: 42px;
-  left: 0;
-  right: 0;
-}
 
 .social-icons a{
   display: flex;
@@ -1406,12 +1407,11 @@ z-index: 98;
   transition: 0.5s;
   border: 1px solid #2fbced !important;
 }
-.footer-copyrights{
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
+
+.footer-box p {
+  margin-bottom: 2.7px !important;
 }
+
 
 
 /* scroll to top */
@@ -1438,7 +1438,14 @@ z-index: 98;
 }
 
 
-
+@media screen and (max-width: 1920px) {
+  .clients {
+    margin: 8rem 0;
+  }
+  .footer-box p {
+    margin-bottom: 1em !important;
+  }
+}
 
 
 /* -------------------- scroll snapping */
@@ -1547,6 +1554,23 @@ z-index: 98;
 
   .fnc-nav__control {
     width: 140px;
+  }
+
+  .clients {
+    margin: 0.5rem 0;
+  }
+  .tech {
+    width: 35%;
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+  }
+
+  #f-footer {
+    padding-left: 2rem !important;
+  }
+
+  .footer-box p {
+    margin-bottom: 0.5px !important;
   }
 }
 
@@ -1757,6 +1781,10 @@ z-index: 98;
   #about-us{
     padding-bottom: 30px !important;
   }
+
+  .about-ustwo{
+    padding-bottom: 20rem;
+  }
     
   .hero-section h1 {
     font-size: 38px;
@@ -1895,6 +1923,10 @@ z-index: 98;
   }
   #about-us {
     padding: 66px 0;
+  }
+
+  .about-ustwo{
+    padding: 25rem 0;
   }
 
   .counter-box {

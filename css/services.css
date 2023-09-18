@@ -685,6 +685,10 @@ background: #1d1e22 !important;
   .service-text h1 {
     font-size: 20px;
   }
+
+  .footer-box p {
+    margin-bottom: 2.5px !important;
+  }
 }
 @media screen and (max-width: 1200px){
   .navbar {
@@ -744,6 +748,10 @@ background: #1d1e22 !important;
   }
   #desktopservice{
     display: none !important;
+  }
+
+  .footer-box p {
+    margin-bottom: 12.5px !important;
   }
 }
 

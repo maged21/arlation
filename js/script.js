@@ -1,18 +1,18 @@
 // intro
-document.addEventListener("DOMContentLoaded", function() {
-  const video = document.getElementById("video");
-  const slider = document.getElementById("slider");
-  const firstNavButton = slider.querySelector(".fnc-nav__control");
+// document.addEventListener("DOMContentLoaded", function() {
+//   const video = document.getElementById("video");
+//   const slider = document.getElementById("slider");
+//   const firstNavButton = slider.querySelector(".fnc-nav__control");
 
-  if (video) {
-    video.addEventListener("ended", function() {
-      video.style.display = "none";
-      slider.style.display = "block";
+//   if (video) {
+//     video.addEventListener("ended", function() {
+//       video.style.display = "none";
+//       slider.style.display = "block";
 
-      firstNavButton.click();
-    });
-  }
-});
+//       firstNavButton.click();
+//     });
+//   }
+// });
 
 // slider
 (function() {
@@ -225,26 +225,7 @@ TweenMax.staggerFrom(".navbar-nav .nav-item", 1,{
   ease: Power3.easeInOut
 }, 0.12)
 
-TweenMax.from(".fnc-slide__mask-inner", 1,{
-  delay:4.3,
-  opacity:0,
-  y: -20,
-  ease: Power4.easeIn
-})
 
-TweenMax.from(".fnc-slide__heading-line", 1,{
-  delay:4.8,
-  opacity:0,
-  y: -20,
-  ease: Power4.easeIn
-})
-
-TweenMax.from(".fnc-nav__controls", 1,{
-  delay:5.5,
-  opacity:0,
-  y: 20,
-  ease: Power3.easeInOut
-})
 
 
 

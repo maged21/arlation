@@ -622,6 +622,10 @@ body{
     padding: 0;
   }
 
+  .footer-box p {
+    margin-bottom: 2.5px !important;
+  }
+
 }
 
 @media screen and (max-width: 600px) {
@@ -650,6 +654,10 @@ body{
   .navtwo-item-wrapper::after{
     height: 50px;
     top: 70px;
+  }
+
+  .footer-box p {
+    margin-bottom: 12.5px !important;
   }
 
 

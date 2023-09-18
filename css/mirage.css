@@ -508,15 +508,18 @@ background: #1d1e22 !important;
   background-size: cover;
 }
 
-.mirage h4{
+.mirage-text{
   line-height: 38px;
 }
 
-.eyad-video{
-  width: 800px;
+
+.feedback{
+  padding: 4rem;
+  background-color: rgba(209, 150, 120, .8);
 }
-
-
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  background: #D19678!important;
+}
 
 /* cookies */
 /* Cookie consent banner styles */
@@ -630,6 +633,10 @@ background: #1d1e22 !important;
   .eyad-video{
     width: 550px;
   }
+
+  .footer-box p {
+    margin-bottom: 2.5px !important;
+  }
   
 }
 @media screen and (max-width: 1200px){
@@ -682,8 +689,11 @@ background: #1d1e22 !important;
     font-size: 30px;
   }
 
-  /* .eyad-video{
-    width: 370px;
-  } */
+  .feedback {
+    padding: 2rem 0.4rem;
+  }
 
+  .footer-box p {
+    margin-bottom: 12.5px !important;
+  }
 }
