@@ -130,6 +130,16 @@ function toggleSecondNavbar() {
 }
 
 // page transition
+// Function to disable scrolling
+function disableScroll() {
+  document.body.style.overflow = 'hidden';
+}
+
+// Function to enable scrolling
+function enableScroll() {
+  document.body.style.overflow = 'auto';
+}
+
 document.addEventListener("DOMContentLoaded", function() {
   const urlParams = new URLSearchParams(window.location.search);
   if (urlParams.get('transition') === 'true') {
@@ -140,32 +150,36 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   }
 });
-  
-  function transition(callback) {
-    if (window.innerWidth < 600) {
-      if (callback) {
-          callback(); // If callback is provided, execute it immediately
-      }
-      return; // Exit the function if screen width is less than 600px
+
+function transition(callback) {
+  if (window.innerWidth < 600) {
+    if (callback) {
+      callback(); // If callback is provided, execute it immediately
+    }
+    return; // Exit the function if screen width is less than 600px
   }
 
+  var tl = new TimelineMax({
+    onComplete: function() {
+      setTimeout(callback, 50); // Delay navigation by a small amount
+    }
+  });
 
-    var tl = new TimelineMax({
-      onComplete: function() {
-        setTimeout(callback, 50); // Delay navigation by a small amount
-      }
-    });
-    
-// Close Animation
-tl.to('.before', 0.2, { top: '50%', ease: Power2.easeOut }, 'close')
-  .to('.after', 0.2, { bottom: '50%', ease: Power2.easeOut }, 'close')
-  .to('.loader', 0.2, { opacity: 1 });
+  // Disable scrolling when the loader is displayed
+  disableScroll();
 
-// Open Animation
-tl.to('.before', 0.2, { top: '0%', ease: Power2.easeOut }, '+=1.5')
-  .to('.after', 0.2, { bottom: '0%', ease: Power2.easeOut }, '-=0.2')
-  .to('.loader', 0.2, { opacity: 0 }, '-=0.2');
+  // Close Animation
+  tl.to('.before', 0.2, { top: '50%', ease: Power2.easeOut }, 'close')
+    .to('.after', 0.2, { bottom: '50%', ease: Power2.easeOut }, 'close')
+    .to('.loader', 0.2, { opacity: 1 });
 
-// Play the timeline
-tl.play();
-  }
+  // Open Animation
+  tl.to('.before', 0.2, { top: '0%', ease: Power2.easeOut }, '+=1.5')
+    .to('.after', 0.2, { bottom: '0%', ease: Power2.easeOut }, '-=0.2')
+    .to('.loader', 0.2, { opacity: 0 }, '-=0.2')
+    .call(enableScroll); // Re-enable scrolling when the loader is hidden
+
+  // Play the timeline
+  tl.play();
+}
+

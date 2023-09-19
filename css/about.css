@@ -92,6 +92,7 @@ body{
           transform: translateY(-50%) translateX(-50%);
   z-index: 500;
   opacity: 0;
+  
 }
 .loader > div {
   height: 100%;
