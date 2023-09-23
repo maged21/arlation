@@ -1,18 +1,18 @@
 // intro
-// document.addEventListener("DOMContentLoaded", function() {
-//   const video = document.getElementById("video");
-//   const slider = document.getElementById("slider");
-//   const firstNavButton = slider.querySelector(".fnc-nav__control");
+document.addEventListener("DOMContentLoaded", function() {
+  const video = document.getElementById("video");
+  const slider = document.getElementById("slider");
+  const firstNavButton = slider.querySelector(".fnc-nav__control");
 
-//   if (video) {
-//     video.addEventListener("ended", function() {
-//       video.style.display = "none";
-//       slider.style.display = "block";
+  if (video) {
+    video.addEventListener("ended", function() {
+      video.style.display = "none";
+      slider.style.display = "block";
 
-//       firstNavButton.click();
-//     });
-//   }
-// });
+      firstNavButton.click();
+    });
+  }
+});
 
 // slider
 (function() {
@@ -427,4 +427,3 @@ span.addEventListener("click", function () {
     behavior: "smooth",
   });
 });
-

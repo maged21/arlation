@@ -475,9 +475,10 @@ z-index: 98;
 
 /* ----------------------- hero */
 
-  /* #slider{
+  #slider{
     display: none;
-  } */
+  }
+  
 .fnc-slider {
   position: absolute;
   top: 0;
@@ -617,7 +618,7 @@ z-index: 98;
   position: relative;
   padding-right: 20px;
   font-size: 100px;
-  color: #fff;
+  color: #2fbced;
   word-spacing: 10px;
 }
 .fnc-slide__heading-line:nth-child(2) {
@@ -818,6 +819,12 @@ z-index: 98;
 
 .example-slider .fnc-slide-6 .fnc-slide__inner,
 .example-slider .fnc-slide-6 .fnc-slide__mask-inner {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/services/game-localization.png);
+  background-size: cover;
+}
+
+.example-slider .fnc-slide-7 .fnc-slide__inner,
+.example-slider .fnc-slide-7 .fnc-slide__mask-inner {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/Pink\ Abstract\ Tech\ Gaming\ Neon\ Desktop\ Wallpaper.png);
   background-size: cover;
 }
@@ -850,7 +857,30 @@ z-index: 98;
   filter: brightness(20%);
   z-index: -1; /* Ensure the pseudo-element is behind the content */
 }
+#toggleMute{
+  position: absolute;
+  left: 1%;
+  bottom: 2%;
+  font-size: 16px;
+  color: #eee;
+  width: 50px;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  background: #D19678;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  opacity: 0.5;
+  transition: all 0.4s ease-out;
+}
 
+#muteButton.fade:hover {
+  opacity: 0.8;
+}
+
+.fade {
+  opacity: 0.2;
+}
 
 .launch-time{
   text-align: center;
@@ -1602,6 +1632,34 @@ z-index: 98;
   background: #101010;
 }
 
+.fnc-slide__mask {
+  width: 40vh;
+  height: 43vh;
+  top: 25%;
+  right: 38%;
+}
+
+.fnc-slide__heading-line {
+  font-size: 27px;
+  margin-left: -60px !important;
+  letter-spacing: 5px;
+}
+
+.fnc-slide__mask-inner {
+  height: 24vh;
+  margin-left: 6vw;
+  margin-top: -40vh;
+}
+.fnc-slide__content {
+  z-index: 2;
+  position: absolute;
+  left: 50%;
+  top: 60%;
+  transform: translate(-25%, -0%);
+  /* text-align: center; */
+}
+
+
 .video-section {
   height: 140%;
   top: -80px;
@@ -1668,10 +1726,11 @@ z-index: 98;
 
 
   .fnc-nav{
-    right: -60px;
+    right: -90px;
   }
   .fnc-nav__control {
-    width: 126px;
+    width: 12%;
+    margin: 0px 3px;
   }
 
 }
@@ -1783,6 +1842,23 @@ z-index: 98;
   margin-left: 0;
   margin-top: 200px;
 }
+.fnc-slide__content {
+  z-index: 2;
+  position: absolute;
+  left: 50%;
+  top: 60%;
+  transform: translate(-25%, -0%);
+  /* text-align: center; */
+}
+
+.fnc-slide__heading {
+  margin-bottom: -43px;
+  text-transform: uppercase;
+}
+.fnc-slide__heading-line:nth-child(2) {
+  padding-left: 0px;
+}
+
 
 
   #about-us{
@@ -1930,7 +2006,7 @@ z-index: 98;
   }
 
   .about-ustwo{
-    padding: 13rem 0;
+    padding: 17rem 0;
   }
 
   .counter-box {
@@ -1939,7 +2015,6 @@ z-index: 98;
   .about-text > ul > li {
     font-size: 15px !important;
   }
-
 
   .accord-title {
     font-size: 18px;

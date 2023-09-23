@@ -180,6 +180,34 @@ body{
     object-fit: cover;
     filter: brightness(0.8);
   }
+
+  #heroVideo{
+    position: relative;
+  }
+  #muteButton{
+    position: absolute;
+    left: 1%;
+    bottom: 2%;
+    font-size: 16px;
+    color: #eee !important;
+    width: 50px;
+    padding: 15px;
+    border: none !important;
+    border-radius: 10px;
+    outline: none !important;
+    background: #D19678;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    opacity: 0.5;
+    transition: all 0.4s ease-out;
+  }
+
+  #muteButton.fade:hover {
+    opacity: 0.8;
+  }
+  
+  .fade {
+    opacity: 0.2;
+  }
   
 
 #header h1 {
@@ -514,8 +542,13 @@ background: #1d1e22 !important;
 
 
 .feedback{
-  padding: 4rem;
+  padding: 0rem 2rem;
   background-color: rgba(209, 150, 120, .8);
+  height: 350px !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
   background: #D19678!important;
@@ -652,6 +685,10 @@ background: #1d1e22 !important;
     opacity: 1 !important;
     display: flex !important;
     background: #101010;
+  }
+
+  .video-section {
+    z-index: 2;
   }
 
 }
